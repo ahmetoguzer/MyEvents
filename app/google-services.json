@@ -1,0 +1,58 @@
+{
+  "project_info": {
+    "project_number": "229436915580",
+    "firebase_url": "https://myevents-ec2eb.firebaseio.com",
+    "project_id": "myevents-ec2eb",
+    "storage_bucket": "myevents-ec2eb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:229436915580:android:f13658f1ff3d8178",
+        "android_client_info": {
+          "package_name": "com.ahmet.app.myevents"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "229436915580-f8tpopkcqk8ou6le8qhs4u8mdpaj90c5.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ahmet.app.myevents",
+            "certificate_hash": "f67adbc24e544ff376b38432749c798002a3e584"
+          }
+        },
+        {
+          "client_id": "229436915580-mj8ddkt8l89ei1csfs48a03nk9rvotov.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD4NkprR6wloBMfVza6JpUtlYFHFJfHiK0"
+        },
+        {
+          "current_key": "AIzaSyD4NkprR6wloBMfVza6JpUtlYFHFJfHiK0"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "229436915580-mj8ddkt8l89ei1csfs48a03nk9rvotov.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
