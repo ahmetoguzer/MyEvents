@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.Window;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.google.firebase.FirebaseApp;
 import com.google.firebase.database.DataSnapshot;
@@ -80,7 +81,6 @@ public class RegisterActivity extends AppCompatActivity {
 
             }
         });
-
     }
 
 
@@ -92,6 +92,8 @@ public class RegisterActivity extends AppCompatActivity {
         User user = new User(formattedDate.toString(),etName.getText().toString(),etEmail.getText().toString(),
                 etPassword.getText().toString());
         databaseReference.child("Users").child(user.getUid()).setValue(user);
+        Toast.makeText(RegisterActivity.this, "Succesful",
+                Toast.LENGTH_SHORT).show();
         Intent myIntent = new Intent(RegisterActivity.this, LoginActivity.class);
         startActivity(myIntent);
     }

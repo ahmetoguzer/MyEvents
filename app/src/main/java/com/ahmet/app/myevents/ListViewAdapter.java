@@ -85,7 +85,7 @@ public class ListViewAdapter extends BaseAdapter {
         if(days+1 >= 0){
             txtDate.setText(days+1+" days remaining");
         }else{
-            txtDate.setText("Geçti");
+            txtDate.setText("Past day");
         }
 
         btnDelete.setOnClickListener(new View.OnClickListener() {

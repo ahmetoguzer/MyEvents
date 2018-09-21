@@ -42,8 +42,10 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                for(int i = 0; i < userList.size(); i++){
+                int cnt=0;
 
+                for(int i = 0; i < userList.size(); i++){
+                        cnt++;
                     if(userList.get(i).getName().toString().equals(etName.getText().toString())
                             && userList.get(i).getPassword().toString().equals(etPassword.getText().toString())
                             ){
@@ -53,12 +55,11 @@ public class LoginActivity extends AppCompatActivity {
                         Intent myIntent = new Intent(LoginActivity.this, MainActivity.class);
                         startActivity(myIntent);
                         return;
-                    }else if(!userList.get(i).getName().toString().equals(etName.getText().toString())
-                            || !userList.get(i).getPassword().toString().equals(etPassword.getText().toString()))
-                    {
+                    }else if(cnt == userList.size()){
                         Toast.makeText(LoginActivity.this, "Not Found User",
                                 Toast.LENGTH_SHORT).show();
                     }
+
                 }
             }
         });
