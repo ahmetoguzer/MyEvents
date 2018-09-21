@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.view.Window;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -20,7 +19,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by Ahmet Oguzer on 20.09.2018.
+ * Created by Ahmet Oguz Er on 20.09.2018.
  */
 
 public class LoginActivity extends AppCompatActivity {
@@ -54,7 +53,9 @@ public class LoginActivity extends AppCompatActivity {
                         Intent myIntent = new Intent(LoginActivity.this, MainActivity.class);
                         startActivity(myIntent);
                         return;
-                    }else{
+                    }else if(!userList.get(i).getName().toString().equals(etName.getText().toString())
+                            || !userList.get(i).getPassword().toString().equals(etPassword.getText().toString()))
+                    {
                         Toast.makeText(LoginActivity.this, "Not Found User",
                                 Toast.LENGTH_SHORT).show();
                     }
@@ -97,7 +98,6 @@ public class LoginActivity extends AppCompatActivity {
                     User user = dataSnapshot1.getValue(User.class);
                     userList.add(user);
                 }
-
 
             }
 
