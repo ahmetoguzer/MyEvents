@@ -23,6 +23,7 @@ import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
@@ -82,7 +83,16 @@ public class AddEventFragment extends Fragment {
         btnAddEvent.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                createUser();
+                if(etTitle.getText().toString().equals("")
+                        || etComment.getText().toString().equals("")
+                        || tvDate.getText().toString().equals("")) {
+                    Toast.makeText(getActivity(), "Please fill in the required fields",
+                            Toast.LENGTH_SHORT).show();
+                    return;
+                }else{
+                    createUser();
+                }
+
             }
         });
     }
